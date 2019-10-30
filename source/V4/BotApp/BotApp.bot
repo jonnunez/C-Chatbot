@@ -1,0 +1,43 @@
+{
+    "name": "BotApp",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://10.211.55.2:17070/api/messages",
+            "id": "546434f0-b465-11e8-bf1e-b98c0ae7c001",
+            "name": "Local"
+        },
+        {
+            "type": "endpoint",
+            "appId": "a4c87028-7690-4179-accc-6dc0d78e849a",
+            "appPassword": "zmeOF8262qrddEOPWN3{#:(",
+            "endpoint": "http://localhost:8110/api/messages",
+            "name": "botApp",
+            "id": "204"
+        },
+        {
+            "type": "endpoint",
+            "appId": "a4c87028-7690-4179-accc-6dc0d78e849a",
+            "appPassword": "zmeOF8262qrddEOPWN3{#:(",
+            "endpoint": "https://botservices.azurewebsites.net/api/messages",
+            "name": "livenewurl",
+            "id": "180"
+        },
+        {
+            "type": "endpoint",
+            "appId": "a4c87028-7690-4179-accc-6dc0d78e849a",
+            "appPassword": "zmeOF8262qrddEOPWN3{#:(",
+            "endpoint": "http://botappls.azurewebsites.net/api/messages",
+            "name": "botapplslive",
+            "id": "5"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "path": "E:\\Projects\\BOT\\app-innovation-team-master-gitcode\\3. samples\\Bot\\BotApp\\BotApp.bot",
+    "overrides": null,
+    "secretKey": ""
+}

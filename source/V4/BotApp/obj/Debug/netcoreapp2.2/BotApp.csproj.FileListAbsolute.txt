@@ -1,0 +1,14 @@
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\bin\Debug\netcoreapp2.2\BotApp.deps.json
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\bin\Debug\netcoreapp2.2\BotApp.runtimeconfig.json
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\bin\Debug\netcoreapp2.2\BotApp.runtimeconfig.dev.json
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\bin\Debug\netcoreapp2.2\BotApp.dll
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\bin\Debug\netcoreapp2.2\BotApp.pdb
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.csproj.CoreCompileInputs.cache
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.RazorAssemblyInfo.cache
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.RazorAssemblyInfo.cs
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.AssemblyInfoInputs.cache
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.AssemblyInfo.cs
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.RazorTargetAssemblyInfo.cache
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.dll
+C:\Users\pr52953\Source\Repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.pdb
+C:\Users\pr52953\source\repos\BPPR-HR-ChatBot-v4\source\V4\BotApp\obj\Debug\netcoreapp2.2\BotApp.csprojAssemblyReference.cache

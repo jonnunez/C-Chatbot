@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\pr52953\\source\\repos\\BPPR-HR-ChatBot-v4\\source\\V4\\BotApp\\BotApp.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pr52953\\source\\repos\\BPPR-HR-ChatBot-v4\\source\\V4\\BotApp\\BotApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pr52953\\source\\repos\\BPPR-HR-ChatBot-v4\\source\\V4\\BotApp\\BotApp.csproj",
+        "projectName": "BotApp",
+        "projectPath": "C:\\Users\\pr52953\\source\\repos\\BPPR-HR-ChatBot-v4\\source\\V4\\BotApp\\BotApp.csproj",
+        "packagesPath": "C:\\Users\\pr52953\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pr52953\\source\\repos\\BPPR-HR-ChatBot-v4\\source\\V4\\BotApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\pr52953\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Cognitive.Face.Dotnet": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Consul": {
+              "target": "Package",
+              "version": "[0.7.2.6, )"
+            },
+            "Microsoft.ApplicationInsights": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Microsoft.ApplicationInsights.AspNetCore": {
+              "target": "Package",
+              "version": "[2.7.1, )"
+            },
+            "Microsoft.AspNetCore.All": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Azure.KeyVault.Core": {
+              "target": "Package",
+              "version": "[3.0.3, )"
+            },
+            "Microsoft.Azure.Storage.Blob": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            },
+            "Microsoft.Bot.Builder": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Builder.AI.Luis": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Builder.AI.QnA": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Builder.ApplicationInsights": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Builder.Azure": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Builder.Dialogs": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Builder.Integration.ApplicationInsights.Core": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Builder.Integration.AspNet.Core": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Connector": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Bot.Schema": {
+              "target": "Package",
+              "version": "[4.5.1, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.Recognizers.Text.Number": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.7.12, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.8.1, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.6.10, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

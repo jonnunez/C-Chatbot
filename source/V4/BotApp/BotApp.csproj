@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <DockerTargetOS>Linux</DockerTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>bb36fd58-8424-43a9-a96b-ef14acbcd76b</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/3c1bf4c5-e0ae-4d7d-a2bf-0a2b9059905c/resourcegroups/BOT/providers/microsoft.insights/components/BotApplicationInsights</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/3c1bf4c5-e0ae-4d7d-a2bf-0a2b9059905c/resourcegroups/BOT/providers/microsoft.insights/components/BotApplicationInsights</ApplicationInsightsAnnotationResourceId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cognitive.Face.Dotnet" Version="1.0.2" />
+    <PackageReference Include="Consul" Version="0.7.2.6" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.7.1" />
+    <PackageReference Include="Microsoft.Azure.KeyVault.Core" Version="3.0.3" />
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Bot.Builder" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.Luis" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.AI.QnA" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.ApplicationInsights" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.Azure" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.ApplicationInsights.Core" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Connector" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Bot.Schema" Version="4.5.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.12" />
+    <PackageReference Include="Microsoft.AspNetCore.All" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Recognizers.Text.Number" Version="1.2.3" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.10.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+    <PackageReference Include="MongoDB.Driver" Version="2.8.1" />
+    <PackageReference Include="RestSharp" Version="106.6.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+</Project>
