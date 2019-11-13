@@ -1,0 +1,51 @@
+﻿<div id="webchat" role="main"></div>
+<script src="https://cdn.botframework.com/botframework-webchat/master/webchat-es5.js"></script>
+<script type="text/javascript">
+    ExecuteOrDelayUntilScriptLoaded(init, 'sp.js');
+    var currentUser;
+    function init() {
+        this.clientContext = new SP.ClientContext.get_current();
+        this.oWeb = clientContext.get_web();
+        currentUser = this.oWeb.get_currentUser();
+        this.clientContext.load(currentUser);
+        this.clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySucceeded), Function.createDelegate(this, this.onQueryFailed));
+    }
+
+    function onQuerySucceeded() {
+        console.log("LoginName: " + currentUser.get_loginName());
+        console.log("ID: " + currentUser.get_id());
+        console.log("Title: " + currentUser.get_title());
+        console.log("Email: " + currentUser.get_email());
+
+        var user = {
+            id: currentUser.get_id(),
+            name: currentUser.get_title()
+        };
+        var directLine = window.WebChat.createDirectLine({ token: 'HPE2JACGbvM.3zfAgq86pTuVCXbj0jm0K0GCOXNK07Ep7V09t-hkqWk', user: user });
+        window.WebChat.renderWebChat({
+            directLine: directLine,
+            styleOptions: {
+                hideUploadButton: true,
+                bubbleBackground: 'rgba(0, 0, 255, .1)',
+                bubbleFromUserBackground: 'rgba(0, 255, 0, .1)',
+                botAvatarImage: 'https://jonazurestorage123.blob.core.windows.net/myimages/1538298822.png',
+                botAvatarInitials: 'CB',
+                userAvatarInitials: 'YOU'
+            }
+        }, document.getElementById('webchat'));
+
+        directLine.connectionStatus$.subscribe(function (connectionStatus) {
+            // 2 - Online
+            if (connectionStatus == 2) {
+                directLine.postActivity({
+                    from: user,
+                    name: 'requestGreet',
+                    type: 'event',
+                    value: ''
+                }).subscribe(function (id) {
+                    console.log('"trigger requestGreet" sent');
+                });
+            }
+        });
+    }
+</script>

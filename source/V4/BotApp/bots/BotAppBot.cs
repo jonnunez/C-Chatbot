@@ -25,7 +25,7 @@ namespace BotApp
     #endregion
 
     #region Constructor
-    public BotAppBot(BotAccessors accessors, ConversationState conversationState, UserState userState, ILogger<BotAppBot> logger) 
+    public BotAppBot(BotAccessors accessors, ConversationState conversationState, UserState userState, ILogger<BotAppBot> logger)
     {
       _accessors = accessors;
       _userState = userState;
@@ -46,6 +46,7 @@ namespace BotApp
 
       message = QNABotSettings.welcomemessage;
       await turnContext.SendCustomResponseAsync(message);
+      await turnContext.SendActivityAsync($"Hi there user ID - {turnContext.Activity.From.Id}. Name - {turnContext.Activity.From.Name}. ");
     }
 
     public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken)
@@ -61,6 +62,14 @@ namespace BotApp
       {
         case ActivityTypes.ConversationUpdate:
           if (turnContext.Activity.MembersAdded.FirstOrDefault()?.Id == turnContext.Activity.Recipient.Id)
+          {
+            //await LaunchWelcomeAsync(turnContext);
+            //await dialogContext.BeginDialogAsync(MainDialog.dialogId, null, cancellationToken: cancellationToken);
+          }
+          break;
+
+        case ActivityTypes.Event:
+          if (turnContext.Activity.Name == "requestGreet")
           {
             await LaunchWelcomeAsync(turnContext);
             await dialogContext.BeginDialogAsync(MainDialog.dialogId, null, cancellationToken: cancellationToken);
