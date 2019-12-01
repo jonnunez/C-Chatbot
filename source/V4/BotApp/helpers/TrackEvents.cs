@@ -1,4 +1,5 @@
 using Microsoft.ApplicationInsights;
+using Microsoft.Bot.Schema;
 using System.Collections.Generic;
 
 namespace BotApp.helpers
@@ -19,7 +20,7 @@ namespace BotApp.helpers
             telemetry.TrackEvent(vote + "-Vote", properties);
         }
 
-        public static void TrackConversation(string lastSearchedText = "N/A", string lastAnswerText = "N/A", string Conversationtype="N/A", string score = "N/A", string intent = "N/A")
+        public static void TrackConversation(string lastSearchedText = "N/A", string lastAnswerText = "N/A", string Conversationtype="N/A", string score = "N/A", string intent = "N/A", ChannelAccount from = null)
         {
             var properties = new Dictionary<string, string>
                         {
@@ -29,6 +30,13 @@ namespace BotApp.helpers
                               {"Confidence Score", score},
                               {"Intent", intent},
                         };
+
+            if (from != null)
+            {
+                properties.Add("Username", from.Id);
+                properties.Add("Email", from.Name);
+            }
+
             telemetryConversation.TrackEvent(Conversationtype + "- Conversation Type", properties);
         }
     }

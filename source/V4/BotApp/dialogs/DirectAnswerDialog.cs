@@ -43,7 +43,7 @@ namespace BotApp.dialogs
                     //{
 
                     //}
-                    TrackEvents.TrackConversation(LastSearch, LastAnswer, "Direct Answer", topIntent.Value.score.ToString(), topIntent.Value.intent);
+                    TrackEvents.TrackConversation(LastSearch, LastAnswer, "Direct Answer", topIntent.Value.score.ToString(), topIntent.Value.intent, from: step.Context.Activity.From);
                     await step.Context.SendCustomResponseAsync(response[0].Answer, responseType);
                     await step.BeginDialogAsync(FeedbackDialog.dialogId, null, cancellationToken);
                 }
@@ -80,7 +80,7 @@ namespace BotApp.dialogs
                         await accessors.UserState.SaveChangesAsync(step.Context, false, cancellationToken);
                     }
                     
-                    TrackEvents.TrackConversation(LastSearch, LastAnswer, "Direct Answer from Carousel", topIntent.Value.score.ToString(), topIntent.Value.intent);
+                    TrackEvents.TrackConversation(LastSearch, LastAnswer, "Direct Answer from Carousel", topIntent.Value.score.ToString(), topIntent.Value.intent, from: step.Context.Activity.From);
                     await step.Context.SendCustomResponseAsync(response[0].Answer, responseType);
                     await step.BeginDialogAsync(FeedbackDialog.dialogId, null, cancellationToken);
                 }

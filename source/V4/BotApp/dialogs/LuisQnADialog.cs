@@ -77,13 +77,13 @@ namespace BotApp
             else if ((recognizerResult != null && recognizerResult.Text.Contains(QNABotSettings.noneoftheabove)) || (topIntent != null && topIntent.Value.intent == "None"))
             {
 
-                TrackEvents.TrackConversation(lastSearchedText, lastAnswerText, "None Intent Prompt", topIntent.Value.score.ToString());
+                TrackEvents.TrackConversation(lastSearchedText, lastAnswerText, "None Intent Prompt", topIntent.Value.score.ToString(), from: step.Context.Activity.From);
                 await NoneOfAboveDialog.NoneofTheAbove(step);
             }
 
             else if (recognizerResult != null && (recognizerResult.Text.Contains(QNABotSettings.howtoask) || recognizerResult.Text.Contains(QNABotSettings.howtocontacthr)))
             {
-                TrackEvents.TrackConversation(lastSearchedText, lastAnswerText, "How To Ask/How to Contact Prompt", topIntent.Value.score.ToString());
+                TrackEvents.TrackConversation(lastSearchedText, lastAnswerText, "How To Ask/How to Contact Prompt", topIntent.Value.score.ToString(), from: step.Context.Activity.From);
                 await ChoiceMenuDialog.ChoiceMenu(recognizerResult.Text, step);
             }
             else
@@ -113,7 +113,7 @@ namespace BotApp
                                 break;
 
                             default:
-                                    TrackEvents.TrackConversation(searchedText, lastAnswerText = "Carousel Options", "Carousel Prompt", confidenceScore.ToString(), topIntent.Value.intent);
+                                    TrackEvents.TrackConversation(searchedText, lastAnswerText = "Carousel Options", "Carousel Prompt", confidenceScore.ToString(), topIntent.Value.intent, from: step.Context.Activity.From);
                                     await CarouselDialog.Carousel(msg, recognizerResult, accessors, step, cancellationToken); //Carousel Dialog
                                 break;
 
