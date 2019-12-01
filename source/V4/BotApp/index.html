@@ -24,6 +24,8 @@
         var directLine = window.WebChat.createDirectLine({ token: 'HPE2JACGbvM.3zfAgq86pTuVCXbj0jm0K0GCOXNK07Ep7V09t-hkqWk', user: user });
         window.WebChat.renderWebChat({
             directLine: directLine,
+            userID: user.id,
+            username: user.name,            
             styleOptions: {
                 hideUploadButton: true,
                 bubbleBackground: 'rgba(0, 0, 255, .1)',
